@@ -8,8 +8,9 @@
     <modules>
         <module>PaseAProduccionDao</module>
         <module>PaseAProduccionUtil</module>
-    </modules>
+    <module>PaseAProduccionWeb</module>
+  </modules>
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
-</project>  
+</project>
