@@ -62,6 +62,15 @@ public class UsuarioRepository implements BasicRepository<PpUsuarios, Integer>{
         
         return LstUsuario;
     }
+
+    public PpUsuarios get(String username, String password) {
+        Session session = newHibernateUtil.getSessionFactory().openSession();
+            session.beginTransaction();
+            List<PpUsuarios> LstUsuario = session.createQuery("from PpUsuarios where NOMBRE_USUARIO = '"+ username+"' and CLAVE = '"+password+"';").list();
+        session.getTransaction().commit();
+        
+        return LstUsuario.get(0);
+    }
     
     
     
