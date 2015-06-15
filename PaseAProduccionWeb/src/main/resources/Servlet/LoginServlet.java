@@ -35,13 +35,10 @@ public class LoginServlet extends HttpServlet {
      * @throws IOException if an I/O error occurs
      */
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
-            throws ServletException, IOException {        
-                
+            throws ServletException, IOException {                     
         
-        String username=request.getParameter("username");
-        String password = request.getParameter("password");
-        if(username.equalsIgnoreCase("eyomona")){    
-       /*      PpUsuarios usuario = new PpUsuarios();
+       /* String username=request.getParameter("username");
+        String /*   /*      PpUsuarios usuario = new PpUsuarios();
              Session session = newHibernateUtil.getSessionFactory().openSession();
             session.beginTransaction();
             List<PpUsuarios> LstUsuario = session.createQuery("from PpUsuarios where NOMBRE_USUARIO = '"+ username+"' and CLAVE = '"+password+"';").list();
@@ -55,9 +52,11 @@ public class LoginServlet extends HttpServlet {
            
            
             
-            response.sendRedirect("index.html");
+         /*   response.sendRedirect("index.html");
             return;
-        }
+        }**/
+        String username=request.getParameter("username");
+        
         response.sendRedirect("login.html");
     
     }
