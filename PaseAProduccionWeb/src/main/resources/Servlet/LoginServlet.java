@@ -48,34 +48,22 @@ public class LoginServlet extends HttpServlet {
             
              usuario = LstUsuario.get(0);
          */   
+            
+           
+           
+            
          /*   response.sendRedirect("index.html");
             return;
         }**/
         
         
-        try {
-            // Begin unit of work
-           /* newHibernateUtil.getSessionFactory().getCurrentSession().beginTransaction();
-            String username=request.getParameter("username");
-            
-            // Process request and render page...
-            
-            // End unit of work
-            newHibernateUtil.getSessionFactory().getCurrentSession().getTransaction().commit();*/
+        String username=request.getParameter("username");
+        if(username.equals("eyomona"))
+        {
             response.sendRedirect("index.html");
-            }
-            catch (Exception ex) {
-            newHibernateUtil.getSessionFactory().getCurrentSession().getTransaction().rollback();
-            if ( ServletException.class.isInstance( ex ) ) {
-            throw ( ServletException ) ex;
-            }
-            else {
-            throw new ServletException( ex );
-            }
+            return;
         }
-        
-
-        
+        response.sendRedirect("login.html");
     
     }
 
